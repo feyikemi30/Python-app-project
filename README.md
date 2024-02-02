@@ -9,6 +9,7 @@ Create new Git repository.
 Create project structure.
 
 Tasks:
+Write code for the python application
 Write a Dockerfile for the Python application.
 Test the Docker image locally with sample data.
 Document the local testing process.
