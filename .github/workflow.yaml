@@ -4,27 +4,24 @@ name: CI
 #Controls when the branch will run
 on:
   push: 
-    branches:
-      - dev-1
+    branches: [main]
 #Triggers the workflow
   pull-request:
     branch: [main]
 
+  workflow_dispatch:
+
 jobs: 
   build:  
     runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v3
+    # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
 
-    steps:
-    
-    - uses: actions/checkout@v3
-  
-  create-pull-request:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the repo
-        uses: actions/checkout@v3
-        with:
-          ref: develop # Make sure we checkout to the correct branch
+
+ 
 
 
   
