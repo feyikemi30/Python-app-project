@@ -1,0 +1,23 @@
+---
+name: CI
+
+#Controls when the branch will run
+on:
+#Triggers the workflow
+  push: 
+    branches: [main]
+  pull-request:
+    branch: [main]
+
+jobs: 
+  tf-lint:  
+    runs-on: [self-hosted, ubuntu, sm]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+  
+
+
+
