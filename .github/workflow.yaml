@@ -3,6 +3,9 @@ name: CI
 
 #Controls when the branch will run
 on:
+  push: 
+    branches:
+      - dev-1
 #Triggers the workflow
   pull-request:
     branch: [main]
@@ -14,6 +17,16 @@ jobs:
     steps:
     
     - uses: actions/checkout@v3
+  
+  create-pull-request:
+    create-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+        with:
+          ref: develop # Make sure we checkout to the correct branch
+
 
   
 
