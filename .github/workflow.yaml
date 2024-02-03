@@ -5,15 +5,13 @@ name: CI
 on:
 #Triggers the workflow
   push: 
-    branch:
-      Dev-1
-  Pull-request:
-    branch:
-      Dev-1
+    branches: [main]
+  pull-request:
+    branch: [main]
 
 jobs: 
-  build:  
-    runs-on: Ubuntu
+  tf-lint:  
+    runs-on: [self-hosted, ubuntu, sm]
 
     steps:
       - name: Checkout Repository
