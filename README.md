@@ -8,6 +8,7 @@ Tasks:
 Create new Git repository.
 Create project structure.
 
+
 Tasks:
 Write code for the python application
 Write a Dockerfile for the Python application.
