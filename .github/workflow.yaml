@@ -1,0 +1,25 @@
+---
+name: CI
+
+#Controls when the branch will run
+on:
+#Triggers the workflow
+  push: 
+    branch:
+      Dev-1
+  Pull-request:
+    branch:
+      Dev-1
+
+jobs: 
+  build:  
+    runs-on: Ubuntu
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+  
+
+
+
